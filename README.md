@@ -49,6 +49,8 @@ When you open this project in GitHub Codespaces:
    ```bash
    npm run dev
    ```
+   - Run this command from the project root (not inside `client` or `server`)
+   - No need to run `npm start` manually; `npm run dev` starts both backend (5000) and frontend (3000) together
 
 5. **Access the application**:
    - Click on the "Frontend (React)" port notification or go to the Ports tab
@@ -68,6 +70,8 @@ npm run install-all
 ```bash
 npm run dev
 ```
+   - Run this command from the project root (not inside `client` or `server`)
+   - No need to run `npm start` manually; `npm run dev` starts both backend (5000) and frontend (3000) together
 
 This will start both the backend server (port 5000) and the frontend development server (port 3000).
 
