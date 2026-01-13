@@ -24,7 +24,7 @@ const getApiUrl = (): string => {
       // Should become: expert-space-train-4jj76wxj97jxh57qq-5000.app.github.dev
       const portMatch = hostname.match(/^(.+?)-(\d+)\.(.+)$/);
       if (portMatch) {
-        const [, baseName, , domain] = portMatch;
+        const [, baseName, currentPort, domain] = portMatch;
         // Replace the port number with 5000 for the backend
         const backendHost = `${baseName}-5000.${domain}`;
         return `${protocol}//${backendHost}/api`;

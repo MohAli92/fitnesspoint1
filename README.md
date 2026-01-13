@@ -35,48 +35,41 @@ A comprehensive fitness awareness website with social features, calorie calculat
 - Node.js (v14 or higher)
 - npm or yarn
 
-### GitHub Codespaces Setup (Automatic) 🚀
+### GitHub Codespaces Setup (Automatic)
 
-When you open this project in GitHub Codespaces, everything is set up automatically:
+When you open this project in GitHub Codespaces:
 
-1. **Dependencies are installed automatically** - All required packages (root, server, and client) will be installed automatically when the container is created. Just wait for the `postCreateCommand` to finish.
+1. **Dependencies are installed automatically** - All required packages (root, server, and client) will be installed automatically when the container is created.
 
 2. **Ports are forwarded automatically** - Ports 3000 (Frontend) and 5000 (Backend) are automatically forwarded and accessible via public URLs.
 
 3. **API URL is detected automatically** - The frontend automatically detects the Codespace environment and connects to the backend using the correct external URL. No manual configuration needed!
 
-4. **Start the servers** (run this command in the **root directory**):
+4. **Start the servers**:
    ```bash
    npm run dev
    ```
-   This single command starts both the backend server (port 5000) and frontend development server (port 3000) simultaneously.
 
 5. **Access the application**:
-   - After running `npm run dev`, wait for both servers to start (you'll see "Compiled successfully" for the frontend)
-   - **Method 1**: Click on the port notification that appears in the bottom-right corner (port 3000)
-   - **Method 2**: Go to the **Ports** tab in VS Code (usually at the bottom), find port **3000**, and click the 🌐 icon or right-click → "Open in Browser"
-   - **Method 3**: Look for a message like "On Your Network: http://xxx-3000.app.github.dev" in the terminal and copy that URL
-   - The frontend will automatically connect to the backend using the correct Codespace URL - no manual configuration needed!
-   
-   **Note**: In Codespace, the browser doesn't open automatically. You need to manually open the port URL from the Ports tab or notification.
-
-**Note:** The `.env` file is optional. The server uses default values (PORT=5000, JWT_SECRET=default) if no `.env` file exists.
+   - Click on the "Frontend (React)" port notification or go to the Ports tab
+   - The frontend will automatically connect to the backend using the correct Codespace URL
+   - No need to manually configure any URLs!
 
 ### Local Development Setup
 
-#### Installation
+### Installation
 
 1. Install all dependencies (root, server, and client):
 ```bash
 npm run install-all
 ```
 
-2. Start the development servers (run this command in the **root directory**):
+2. Start the development servers:
 ```bash
 npm run dev
 ```
 
-This will start both the backend server (port 5000) and the frontend development server (port 3000) simultaneously using `concurrently`.
+This will start both the backend server (port 5000) and the frontend development server (port 3000).
 
 ### Manual Setup (Alternative)
 
@@ -115,18 +108,12 @@ npm start
 
 ## Environment Variables
 
-The `.env` file is **optional**. The server uses default values if no `.env` file exists:
-- `PORT=5000` (default)
-- `JWT_SECRET=your-secret-key-change-in-production` (default)
-
-To customize these values, create a `.env` file in the `server` directory:
+Create a `.env` file in the `server` directory:
 
 ```
 PORT=5000
 JWT_SECRET=your-secret-key-change-in-production
 ```
-
-**Note:** In production, always set a strong `JWT_SECRET` value.
 
 ## Project Structure
 
@@ -146,10 +133,8 @@ FitnessPoint/
 │   │   ├── context/       # React context
 │   │   └── App.tsx        # Main app component
 │   └── package.json
-└── package.json           # Root package.json (contains npm run dev)
+└── package.json           # Root package.json
 ```
-
-**Important:** Always run `npm run dev` from the **root directory**, not from `server/` or `client/` directories. The root `package.json` uses `concurrently` to start both servers simultaneously.
 
 ## API Endpoints
 
