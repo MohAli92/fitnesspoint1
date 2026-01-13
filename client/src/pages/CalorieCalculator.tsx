@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import { CalculatorIcon, SparklesIcon } from '@heroicons/react/24/outline';
